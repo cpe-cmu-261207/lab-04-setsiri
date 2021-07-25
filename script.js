@@ -15,6 +15,9 @@ function addtodo(event){
     tododiv.classList.add("todo");
     //cre li
     const newtodo = document.createElement("li");
+    if (todoinput.value == "") {
+        alert("คุณยังไม่ได้ใส่ to do list")
+      } else {
     newtodo.innerText=todoinput.value;
     newtodo.classList.add("todo-item");
     tododiv.appendChild(newtodo);
@@ -32,6 +35,7 @@ function addtodo(event){
      todolist.appendChild(tododiv);
      //clear input task
      todoinput.value = "";
+      }
 }
 
 function deleteCheck(e){
